@@ -13,7 +13,7 @@ import java.util.UUID;
 public interface UserRepository extends JpaRepository<User, UUID> {
 
     @Query(
-            "SELECT U.id " +
+            "SELECT U " +
             "FROM User AS U " +
             "WHERE U.mail = :mail"
     )
