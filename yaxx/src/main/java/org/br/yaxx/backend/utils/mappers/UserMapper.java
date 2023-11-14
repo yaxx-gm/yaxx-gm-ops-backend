@@ -16,4 +16,14 @@ public class UserMapper {
 
     }
 
+    public static User alterUser(User user, UserDTO dto){
+
+        user.setFirst_name(dto.first_name());
+        user.setLast_name(dto.last_name());
+        user.setMail(dto.mail());
+        user.setPassword(dto.password());
+
+        return user;
+    }
+
 }
